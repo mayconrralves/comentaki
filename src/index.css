@@ -11,3 +11,46 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+  background:#E4FFF9;
+}
+
+.container {
+  border: 1px solid;
+  width: 100%;
+  margin: 3px;
+}
+.create-login-user {
+  text-align: center;
+}
+.create-login-user input, button {
+  width: 70%;
+  height: 50px;
+  border-radius: 5px;
+  margin: 2px;
+  font-size: 1.2em;
+}
+
+button {
+  background:#00848C;
+  font-weight: bold;
+  font-size: 1.4em;
+  
+}
+.comments {
+  font-size: 1.2em;
+  padding: 5px;
+  border: 7px solid white;
+  border-radius: 9px;
+}
+
+.comments div {
+  border: 2px solid white;
+  padding: 5px;
+  text-align: center;
+  border-radius: 8px;
+  font-size: 1.3em;
+}
