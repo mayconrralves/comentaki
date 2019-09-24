@@ -6,7 +6,9 @@ const Comment=({ comment }) =>{
   const auth = useContext(AuthContext)
     return (
       <div>
-        {comment.content} por {comment.user.name} em < Time timestamp={comment.createdAt} />
+        <span className='comment-sp'>{comment.content}</span>
+        <br />
+        <span className='comment-info'>por {comment.user.name} em < Time timestamp={comment.createdAt} /></span> 
       </div>
     )
   }

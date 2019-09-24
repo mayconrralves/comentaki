@@ -13,12 +13,12 @@ const FormDisplayName = ({ displayName, user }) => {
     return(
         <>
             <input type='text' value={newDisplayName} onChange={onChange}/>
-            <button onClick={save} >Save Display name</button>
+            <button onClick={save} >Change</button>
         </>
     )
     
 }
-const UserInfo = () => {
+const UserInfo = ({ setHideLoginState}) => {
     const auth = useContext(AuthContext)
     
     if(auth.user === null) {
@@ -27,14 +27,18 @@ const UserInfo = () => {
     const {displayName} = auth.user
     const [alternativeDisplayName] = auth.user.email.split('@') 
     const dn = displayName || alternativeDisplayName
+
+    const signout = () =>{
+        auth.signout()
+    }
     
-   
     return (
-        <>
-         <p>Ola {dn}!</p>
-        <FormDisplayName displayName={dn} user={auth.user} />
-        <button onClick={auth.signout}>Sair!</button>
-        </>
+        <div className='flex userInfo'>
+        
+         <p>Olá <FormDisplayName displayName={dn} user={auth.user} /></p>
+            
+            <button className='button-sair' onClick={signout}>Sair!</button>
+        </div>
        
     )
 

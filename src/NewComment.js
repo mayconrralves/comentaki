@@ -1,7 +1,7 @@
 import React, { useState, useContext } from 'react'
 import {useDatabasePush} from './database'
 import firebase from './firebase'
-import { AuthProvider, AuthContext } from './auth'
+import { AuthContext } from './auth'
 const NewComment = props => {
     const [, save] = useDatabasePush('comments')
     const [comment, setComment] = useState('')
@@ -26,8 +26,8 @@ const NewComment = props => {
       
     }
     return (
-      <div>
-        <textarea value={comment} onChange={evt => setComment(evt.target.value)} />
+      <div className='postar'>
+        <textarea  value={comment} onChange={evt => setComment(evt.target.value)} />
           <button onClick={createComment}>Postar</button>
   
       </div>

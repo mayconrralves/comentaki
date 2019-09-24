@@ -1,5 +1,6 @@
 import React, {useContext, useState} from 'react'
 import { AuthContext } from './auth'
+import {Link} from 'react-router-dom'
 
 const SignInUser = () => {
     const auth = useContext(AuthContext)
@@ -17,7 +18,7 @@ const SignInUser = () => {
         return null
     }
     return (
-        <>
+        <div className ='container create-login-user'>
         <h3>Entrar na sua Conta: </h3>
         {
             auth.signInUser.signInUserState.error !== '' &&
@@ -28,7 +29,8 @@ const SignInUser = () => {
         <button onClick={()=>{
            auth.signInUser.signInUser(form.email,form.passwd)
         }}>Entrar</button>
-        </>
+        <button><Link to='/createuser' className='create-user-login-link'>Crie sua conta aqui</Link></button>
+        </div>
     )
 
 }

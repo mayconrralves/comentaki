@@ -23,7 +23,6 @@ export const useDatabase = endpoint => {
     useEffect(()=>{
       const ref = firebase.database().ref(endpoint)
       ref.on('value', snapshot => {
-        console.log(snapshot.val())
         setData(snapshot.val())
       })
       return () => {

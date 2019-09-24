@@ -1,43 +1,47 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  
 }
+header {
+  font-size: 1.8em;
+  background-color: #00848C;
+  padding-left: 30px;
+  padding-top: 1px;
+  padding-bottom: 2px;
+  font-family: 'Montserrat', sans-serif;
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
 }
 
 .flex {
   display: flex;
   flex-wrap: wrap;
   background:#E4FFF9;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .container {
   border: 1px solid;
   width: 100%;
   margin: 3px;
+  
 }
 .create-login-user {
   text-align: center;
 }
-.create-login-user input, button {
+input, button {
   width: 70%;
   height: 50px;
-  border-radius: 5px;
+  font-size: 1.4em;
   margin: 2px;
-  font-size: 1.2em;
+  border-radius: 5px;
 }
-
-button {
+ button {
   background:#00848C;
   font-weight: bold;
-  font-size: 1.4em;
+  font-family: 'Montserrat', sans-serif;
+  color: white;
   
 }
 .comments {
@@ -53,4 +57,74 @@ button {
   text-align: center;
   border-radius: 8px;
   font-size: 1.3em;
+}
+
+.userInfo {
+  width: 100%;
+  font-size:1em;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.userInfo input {
+  width: 30%;
+  height: 32px;
+  border-radius: 12px;
+  font-size: 1.2em;
+  
+}
+.userInfo p{
+  margin: 0;
+  width:82%;
+}
+.userInfo p button {
+  width: 25%;
+  height: 35px;
+  border-radius: 12px;
+}
+.button-sair{
+  width: 15%;
+
+  height: 35px;
+}
+
+.newComment {
+  width: 100%;
+  text-align: center;
+}
+.newComment textarea {
+  margin-top: 20px;
+  width: 60%;
+  height: 200px;
+  font-size: 1.8em;
+  
+}
+.newComment button {
+  width: 60%;
+}
+
+header a {
+  text-decoration: none;
+  color:white;
+}
+.comment-sp{
+  font-size: 1.4em;
+}
+
+.comment-info {
+  font-size: 0.8em;
+  font-style: italic;
+}
+
+.noComment {
+  font-size: 1.8em;
+  font-style: italic;
+  text-align: center;
+  border: 0px;
+  margin-top: 40px;
+}
+
+.create-user-login-link {
+  text-decoration: none;
+  color: white;
 }
